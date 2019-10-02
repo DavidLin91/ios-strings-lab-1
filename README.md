@@ -206,7 +206,26 @@ Flower Box:
 | ⚘ | ⚘ | ⚘ | ⚘ | ⚘ |
 - - - - - - - - - - -
 ```
+```
 
+var N = 6
+var flowers = "\u{2698}"
+var borders = "-"
+var rows = " | "
+for _ in 1...11 {
+    print(borders, terminator: " ")
+}
+print()
+ for _ in 1...6 {
+    for _ in 1...5 {
+        print(rows , terminator: flowers)
+    }
+    print(rows)
+    }
+for _ in 1...11 {
+    print(borders, terminator: " ")
+}
+```
 ***
 ## Question 13
 
@@ -242,6 +261,12 @@ Input:
 Expected values:
 `replacedString = "R*plac* th* l*tt*r * with *"`
 
+```
+aString = aString.replacingOccurrances(of: "e" , with: "*")
+```
+
+
+
 ***
 ## Question 15
 
@@ -261,6 +286,12 @@ Input:
 Output:
 `"olleH"`
 
+```
+var aString  = "Hello"
+
+var reversed =  String(aString.reversed())
+print(reversed)
+```
 
 ## 16. Mad-Libs! Add a value to the declared variables below in playgrounds. Insert the variables (already in correct order) inside the stringmadLib and print. 
 
@@ -284,6 +315,27 @@ occasional \() by late afternoon. Wind velocity will
 be \() miles an hour, and the high temperature should
 be around \() degrees. So, if you're going out, you had
 better plan on wearing your \()".
+```
+
+```
+
+var geographicLocation: String = "NYC"
+var adjective1: String = "wind"
+var pluralNoun1: String = "air"
+var adjective2: String = "large"
+var pluralNoun2: String = "everything"
+var number1: Int = 40
+var number2: Int = 120
+var articleOfClothing: String = "life insurance"
+
+var madLib = "Here is tomorrow's weather report for \(geographicLocation)
+and vicinity. Early tomorrow, a \(adjective1)-front will
+collide with a mass of hot \(pluralNoun1) moving from the
+north. This means we can expect \(adjective2) winds and
+occasional \(pluralNoun2) by late afternoon. Wind velocity will
+be \(number1) miles an hour, and the high temperature should
+be around \(number2) degrees. So, if you're going out, you had
+better plan on wearing your \(articleOfClothing)".
 ```
 
 ***
